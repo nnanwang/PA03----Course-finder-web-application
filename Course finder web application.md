@@ -22,29 +22,29 @@ interesting demonstrating your mastery of the core full-stack skills and your ab
 
 1. Pick a Team Captain and have them set up the repository for you 
 
-  a. Clone the cs103aExpressApp to your computer (if you haven't already)
+    a. Clone the cs103aExpressApp to your computer (if you haven't already)
 
-  b. Pull down all of the branches (git fetch -a)
+    b. Pull down all of the branches (git fetch -a)
 
-  c. Checkout the pa03 branch (git checkout pa03)
+    c. Checkout the pa03 branch (git checkout pa03)
 
-  d. Add all collaborators to the repository
+    d. Add all collaborators to the repository
 
 2. Test out the app and see how it works
 
-  a. Open in VScode, view app.js, and use the Run/startdebugging menu item
+    a. Open in VScode, view app.js, and use the Run/startdebugging menu item
 
-  b. sign in, view classes, add and delete them from your schedule
+    b. sign in, view classes, add and delete them from your schedule
 
 3. Currently, the app passes in a function times2str to convert the times JSON object ot a list of strings.  Modify the code so it doesn't have to do that:
 
-  a. Modify the model to add strTimes field which will contain the list of strings strTimes: [String],
+    a. Modify the model to add strTimes field which will contain the list of strings strTimes: [String],
 
-  b. Modify the  '/upsertDB' route so that it sets the course.strTimes field, just as it did for course.num and course.suffix which are the components of course.coursenum
+    b. Modify the  '/upsertDB' route so that it sets the course.strTimes field, just as it did for course.num and course.suffix which are the components of course.coursenum
 
-  c. Modify the course.ejs and courselist.ejs, so they use the course.strTimes field
+    c. Modify the course.ejs and courselist.ejs, so they use the course.strTimes field
 
-  d. Modify the '/courses' and '/course' routes so they don't pass times2str into res.locals
+    d. Modify the '/courses' and '/course' routes so they don't pass times2str into res.locals
 
 4. Add a new form on the index.ejs which asks the user for a keyword and searches for all courses that have that keyword in their course.name. Then create the app.post route which will take that keyword and find those courses and send them to courselist.ejs
 
@@ -59,11 +59,12 @@ What to upload to mastery.cs.brandeis.edu
 a link to your team github repository
 
 a reflection:
-  a. what I learned doing this project (if anything)
+
+    a. what I learned doing this project (if anything)
   
-  b. what was confusing or challenging (if anything)
+    b. what was confusing or challenging (if anything)
   
-  c. what I did personally on the project (including group coding with others)
+    c. what I did personally on the project (including group coding with others)
 
 Rubric
   * This will be graded on the basis of a good faith effort.... if your code generally works, then you will get full credit, if not, then you will be asked to revise and resubmit.
