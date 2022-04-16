@@ -21,7 +21,6 @@ const axios = require("axios")
 const ToDoItem = require("./models/ToDoItem")
 const Course = require('./models/Course')
 const Schedule = require('./models/Schedule')
-const StrTimes = require('./models/strTimes')
 
 // *********************************************************** //
 //  Loading JSON datasets
@@ -247,8 +246,9 @@ app.get('/upsertDB',
         for (timeString of course.times){
           course.strTimes.push(JSON.stringify(timeString))
         }
-        console.log(course.strTimes);
+        console.log(course)
       }
+      
       await Course.findOneAndUpdate({subject,coursenum,section,term},course,{upsert:true})
     }
     const num = await Course.find({}).count();
