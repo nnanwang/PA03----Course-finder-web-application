@@ -23,7 +23,7 @@ var courseSchema = Schema( {
     name: String,
     independent_study: Boolean,
     term: Number,
-    description: String,
+    description: String
 } );
 
 module.exports = mongoose.model( 'Course', courseSchema );

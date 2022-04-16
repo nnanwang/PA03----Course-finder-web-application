@@ -21,6 +21,7 @@ const axios = require("axios")
 const ToDoItem = require("./models/ToDoItem")
 const Course = require('./models/Course')
 const Schedule = require('./models/Schedule')
+const StrTimes = require('./models/strTimes')
 
 // *********************************************************** //
 //  Loading JSON datasets
@@ -241,6 +242,13 @@ app.get('/upsertDB',
       const num = getNum(coursenum);
       course.num=num
       course.suffix = coursenum.slice(num.length)
+      course.strTimes = []
+      if (course.times.length != 0){
+        for (timeString of course.times){
+          course.strTimes.push(JSON.stringify(timeString))
+        }
+        console.log(course.strTimes);
+      }
       await Course.findOneAndUpdate({subject,coursenum,section,term},course,{upsert:true})
     }
     const num = await Course.find({}).count();
@@ -379,6 +387,7 @@ app.set("port", port);
 
 // and now we startup the server listening on that port
 const http = require("http");
+const { countReset } = require("console");
 const server = http.createServer(app);
 
 server.listen(port);
