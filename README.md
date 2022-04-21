@@ -19,6 +19,9 @@ Add a new form on the index.ejs which asks the user for a keyword and searches f
 Danqiu Fu: <br/>
 Modify the schedule.ejs so that it uses flexboxes as we did in the api-final branch rather than an ol list, and put in more information into the flexboxes (similar to the course.ejs pages)<br/>
 
+# Movie Link
+Qishi Xing: https://drive.google.com/file/d/1nWDevu1Iu67PZoy4gfh7TaDgxvIu3jaK/view?usp=sharing
+
 
 
 
