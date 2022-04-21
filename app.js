@@ -308,6 +308,27 @@ app.post('/courses/byInst',
   }
 )
 
+app.post('/courses/byName',
+  // show courses including the input keyword from a form
+  async (req,res,next) => {
+    const keyword = req.body.keyword;
+    const courses = 
+       await Course
+               .find({independent_study:false})
+               .sort({term:1,num:1,section:1})
+    res_courses = []
+    for(course of courses){
+      if (course.name.includes(keyword)){
+        res_courses.push(course)
+      }     
+    }
+    //res.json(courses)
+    res.locals.courses = res_courses
+    res.locals.times2str = times2str
+    res.render('courselist')
+  }
+)
+
 app.use(isLoggedIn)
 
 app.get('/addCourse/:courseId',
