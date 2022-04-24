@@ -20,7 +20,7 @@ Danqiu Fu: <br/>
 Modify the schedule.ejs so that it uses flexboxes as we did in the api-final branch rather than an ol list, and put in more information into the flexboxes (similar to the course.ejs pages)<br/>
 
 # Movie Link
-Qishi Xing: https://drive.google.com/file/d/1nWDevu1Iu67PZoy4gfh7TaDgxvIu3jaK/view?usp=sharing
+Qishi Xing: https://brandeis.zoom.us/rec/share/yrqLo_a75BCogsygcHLlbZuz9WBx1R0gWneLqtT88NueaC-iDLeb8Y3T24S5v45A.8uEl8E5Omo5Lhxkr?startTime=1650766678000
 
 
 
